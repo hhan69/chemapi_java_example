@@ -36,7 +36,7 @@ public class ConsoleClient {
 		// set app_id header
 		String appId = "your_app_id";
 
-		// set api
+		// set resource
 		String resource = "lists";
 
 		// set query parameters:q, limit, offset
