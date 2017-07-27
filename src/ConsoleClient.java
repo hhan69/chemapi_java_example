@@ -30,10 +30,13 @@ public class ConsoleClient {
 		// MediaType.APPLICATION_XML
 		String mediaType = MediaType.APPLICATION_JSON;
 
-		// set user_key header
-		String userKey = "your_user_key";
+		// set app_key header
+		String appKey = "your_app_key";
 
-		// set api
+		// set app_id header
+		String appId = "your_app_id";
+
+		// set resource
 		String resource = "lists";
 
 		// set query parameters:q, limit, offset
@@ -47,7 +50,7 @@ public class ConsoleClient {
 		WebResource service = client.resource(UriBuilder.fromUri(baseAddress).path(resource).queryParam("q", q)
 				.queryParam("limit", limit).queryParam("offset", offset).build());
 
-		WebResource.Builder builder = service.header("user_key", userKey);
+		WebResource.Builder builder = service.header("app_key", appKey).header("app_id", appId);
 
 		String response = builder.accept(mediaType).get(String.class);
 
