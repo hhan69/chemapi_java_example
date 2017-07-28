@@ -37,7 +37,7 @@ public class ConsoleClient {
 		String appId = "your_app_id";
 
 		// set resource
-		String resource = "lists";
+		String resource = "regulatory_lists";
 
 		// set query parameters:q, limit, offset
 		String q = URLEncoder.encode("{\"tags.tag.name\":\"Government Inventory Lists\"}", "UTF-8");
